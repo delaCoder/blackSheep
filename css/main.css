@@ -1,0 +1,388 @@
+  /*font-family: 'Open Sans', sans-serif;
+        font-family: 'Amatic SC', cursive;
+        green: #A2CA97
+        blue: #04ADBF
+        gray: #333 */
+        
+header, nav, footer, section, article, aside, audio, video, main, figure {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FEFDF9;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Amatic Sc', serif;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Amatic SC", Serif;
+    font-size: 2.25em;
+    font-weight: bold;
+    padding: .5em .5em 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1em;
+}
+
+article {
+    padding-bottom: 1em;
+    text-align: center;
+    display: block;
+}
+
+aside {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+header > img {
+    width: 100%;
+    height: auto;
+    opacity: .5;
+}
+
+#pageContent {
+    margin: 0 auto;
+    max-width: 2000px;
+    padding: 0 1em 1em;
+}
+
+.hero h1 {
+    font-family: 'Amatic Sc', serif;
+    font-weight: bold;
+    font-size: 100px;
+    margin: 0;
+}
+        
+#pageTitle h1 {
+    text-align: center;
+}
+        
+#pageTitle p {
+    font-weight: normal;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+/*HEADER NAV STYLING HERE*/
+.mainNav {
+    background-color: #A2Ca97;
+    padding: .5em 0;
+    overflow: hidden;
+    display: block;
+}
+        
+.mainNav ul {
+    list-style-type: none;
+    display: none;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 960px;
+    text-align: center;
+}
+
+.mainNav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 3.25em;
+    display: block;
+}
+
+.mainNav a:visited {
+    color: #7A9871;
+}
+
+.mainNav a:hover {
+    color: #fff;
+}
+
+.mainNav img {
+    max-height: 100px;
+}
+
+.mainNav a.icon {
+    display: block;
+    position: absolute;
+    margin-top: 25px;
+    right: 0;
+    top: 0;
+}
+
+
+/*END HEADER NAV STYLING*/
+        
+.hero {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(../images/hero/home-80.jpg) no-repeat center;
+    background-color: #9BDEE5;
+}
+
+        
+#pageTitle {
+    padding: 6em 0;
+}
+
+article :not(h2) {
+    margin: 0 2em;
+}
+
+article > img {
+    width: 100%;
+    height: auto;
+    max-width: 441px;
+}
+
+.largeOnlyImg {
+    display: none;
+}
+
+
+button {
+    border: none;
+    text-decoration: none;
+    border-radius: 5%;
+    padding: .5em 1em;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+	color: #000;
+}
+
+
+button:active {
+    background-color: #999;
+}
+
+/*FOOTER STYLING HERE*/
+
+footer {
+	background-color: #04ADBF;
+	padding-top: 10px;
+	padding-left: 15px;
+	color: #fff;
+	font-size: 1.5em;
+	display: flex;
+	flex-direction: column;
+}
+
+.footerGroup {
+	order: -1;
+}
+
+#contactInfo {
+	text-align: center;
+}
+
+#copyright {
+    text-align: center;
+    margin: 0 auto;
+    font-size: .75em;
+}
+
+#copyright img {
+    width: 5em;
+	height: auto;
+}
+
+.bannerPattern {
+    background: url(../images/home/banner.png) repeat;
+    height: 300px;
+    width: 100%;
+}
+
+.bannerSolid {
+    background-color: #04ADBF; 
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/*BEGIN MEDIA QUERY LARGE SCREEN*/
+
+@media screen and (min-width: 700px) {
+    
+    .hero {
+        background: url(../images/hero/home-80.jpg) no-repeat center;
+        background-color: #9BDEE5;
+    }
+
+	
+	footer {
+    background-color: #04ADBF;
+	padding-left: 5em;
+	padding-top: 10px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas:
+        "h h h h g g g g g g g g"
+        "s s s s g g g g g g g g"
+        "p p p p i i i i i i i i"
+        "y y y y i i i i i i i i"
+        "n n n n i i i i i i i i"
+        "o o o o i i i i i i i i"
+        "u u u u i i i i i i i i"
+        "e e e e i i i i i i i i"
+        "a a a a r r r r . . . ."
+        "c c c c r r r r . . . ."
+     ;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+	color: #fff;
+	font-size: 1.5em;
+}
+
+footer > .home {
+    grid-area: h;
+}
+
+.home a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .shop {
+    grid-area: s;
+}
+
+.shop a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .patterns {
+    grid-area: p;
+}
+
+.patterns a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .yarn {
+    grid-area: y;
+}
+
+.yarn a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .needles {
+    grid-area: n;
+}
+
+.needles a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .notions {
+    grid-area: o;
+}
+
+.notions a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .supplies {
+    grid-area: u;
+}
+
+.supplies a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .events {
+    grid-area: e;
+}
+
+.events a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .about {
+    grid-area: a;
+}
+
+.about a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .contact {
+    grid-area: c;
+}
+
+.contact a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > .footerGroup {
+    grid-area: g;  
+}
+
+#searchbar > input {
+	width: 20em;
+	height: 2.5em;
+}
+
+footer > #contactInfo {
+    grid-area: i;
+	text-align: left;
+}
+
+footer > #copyright {
+    grid-area: r;
+}
+
+footer > .shopList {
+    padding-left: 50px;
+    
+}
+}
